@@ -1,0 +1,61 @@
+/* Guadarrama */
+
+#include <stdio.h>
+#include <math.h>
+#define MAXSIZE 50
+
+main()
+{
+int categ, i, x, y, count=0, grade;
+int a[100];
+double b[100];
+char check;
+double sum, average=0, add=0, total, finall=0;
+/*-----------------1st-------------------------*/
+    printf("Enter the number of categories: ");
+    scanf("%d", &categ);
+
+    for ( i = 0; i < categ; i++ )
+        {
+        printf("\nEnter the weight: ");
+        scanf("%d",&a[i]);
+        }
+        system("cls");
+/*----------------2nd--------------------------------*/
+    for ( x = 0; x < categ; x++ )
+    {
+sum=0;
+count=0; /* resets count to 0 for every category */
+        do{
+            printf("Enter the grade for category %d: ", x+1);
+            scanf("%d",&grade);
+            printf("\n");
+            printf("Continue the next grade? Type 'y' for YES and 'n' for NO: ");
+            scanf("\n%c",&check);
+            count++;
+            sum+=grade;
+            system ("cls");
+
+          }
+          while (check=='y');
+          b[x]=sum/count;
+    }
+
+/*-------------------------3rd----------------*/
+    for ( x = 0; x < categ; x++ )
+    printf("Overall Grade for Category %d: %2.1lf\n",x+1, b[x]);
+
+    for ( y = 0; y < categ; y++ )
+    {
+
+    add=a[y]*b[y];
+    total+=add;
+    }
+
+    finall=total/100;
+    printf("\nTotal %2.1lf", finall);
+
+getch();
+
+
+}

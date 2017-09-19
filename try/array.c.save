@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+main()
+{
+    double cost [100], y=0, total=0;
+    int numitems=0, items;
+
+    printf("Enter number of items with a max of 100\t");/*(\t) it means tab*/
+    scanf("%d", &numitems);
+    for(items=0;items<numitems;items++)
+    {
+        scanf("%lf",&y);
+        cost[items]=y;
+        total+=y;/*(+=)it adds to itself for every loop*/
+    }
+
+}
+printf("Total = %4.2lf\n",total);
+for(items=0;items<numitems;items++)
+    printf("Individual prices were %4.2lf\n", cost[items]);
+getch();

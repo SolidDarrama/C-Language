@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+main()
+{
+    
+    char student{50};
+    
+    printf("Enter student Name: ");
+    scanf("%s", student);
+    printf("\n\n\n%")
+    
+    
+    getch();
+}
